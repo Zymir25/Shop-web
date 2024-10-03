@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Store Website</title>
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(315deg, rgb(67, 1, 1) 3%, rgb(25, 2, 89) 38%, rgb(83, 1, 124) 68%, rgb(25, 0, 0) 98%);
+            animation: gradient 15s ease infinite;
+            background-size: 400% 400%;
+            background-attachment: fixed;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+
+        /* Header Styling */
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        header nav ul li a:hover {
+            color: #ccc;
+        }
+
+        /* Banner Section */
+        .banner {
+            background-image: url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .banner-text {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1.5rem;
+        }
+
+        .banner-text h2 {
+            font-size: 2.5rem;
+        }
+
+        .banner-text p {
+            font-size: 1.2rem;
+        }
+
+        /* Products Section */
+        .product-section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .product-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0 0.5rem;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card a {
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .product-card a:hover {
+            background-color: #555;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #eee;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .white {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>My Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="banner-text">
+            <h2>Welcome to My Store</h2>
+            <p>Find the best products just for you!</p>
+        </div>
+    </section>
+
+    <section id="products" class="product-section">
+        <h2 class="white">Our Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1628294393-252808396-61020000019182009b6e0a232357_800_800.jpg?w=600&h=600" alt="Product 1">
+                <h3>ASICS GEL (8 COLOURWAYS)</h3>
+                <p><h3>$49</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271676326&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1620179513-252808396-2e1b0000018f682c2d3d0a232357_800_800.jpg?w=600&h=600" alt="Product 2">
+                <h3>YEEZY 350's (MANY STYLES)</h3>
+                <p><h3>$19</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270680447&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem901819060140-39660000018e661aab0b0a813276_1200_1200.jpg?w=600&h=600" alt="Product 3">
+                <h3>JORDAN 3's</h3>
+                <p><h3>$49</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270707923&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Add more products as needed -->
+             <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1620179513-252808396-33550000018f682bff240a239631_1080_1080.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE AIR FORCE 1's <div></div>( ALL STYLES )</h3>
+                <p><h3>$20</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271686156&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1802771872-1234478995-7504000001870ea33b1a0a219249_1098_1098.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE DUNKS <div></div>( MANY COLOURWAYS )</h3>
+                <p><h3>$32</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271637238&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1819032388-341a0000018c594f633f0a231447_800_533.jpg?w=600&h=600" alt="Product 1">
+                <h3>JORDAN 4'S <div></div>( ALL COLOURWAYS )</h3>
+                <p><h3>$52</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271703932&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem901819060140-3b420000018e6620cdea0a239737_1200_800.jpg?w=600&h=600" alt="Product 1">
+                <h3>JORDAN 1's</h3>
+                <p><h3>$44</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270717889&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1620179513-252808396-3be20000018f57b56a6a0a8115b5_769_589.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE AIRMAX 90's<div></div>( MANY COLOURWAYS )</h3>
+                <p><h3>$37</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270700007&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 9 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1787182201-252808396-192d0000018f887da84c0a8115b5_480_480.jpg?w=600&h=600" alt="Product 1">
+                <h3>FISH SHOES <div></div> ( 8 COLOURWAYS )</h3>
+                <p><h3>$5</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271692024&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 10 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1840466345-252808396-24260000018f92792df60a8115b5_800_800.jpg?w=600&h=600" alt="Product 1">
+                <h3>PRADA CUPS <div></div>( MANY COLOURWAYS )</h3>
+                <p><h3>$47</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270684321&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 11 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1846126433-1234478995-2e030000018948d3a20e0a8115b5_2000_2000.jpg?w=600&h=600" alt="Product 1">
+                <h3>ADIDAS CAMPUS <div></div>( MANY COLOURWAYS )</h3>
+                <p><h3>$26</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271547386&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 12 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1839532311-25940000018f91914e8d0a23038e_1024_1024.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE AIR MAX 95 <div></div>( MANY COLOURWAYS )</h3>
+                <p><h3>$33</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270723807&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 13 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1839532311-7da20000018f79fd15fe0a23037f_1170_1191.jpg?w=600&h=600" alt="Product 1">
+                <h3>UGGS <div></div>( 7 STYLES )</h3>
+                <p><h3>$24</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271694008&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 14 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem901819060140-29de0000018e65a309150a231447_1200_800.jpg?w=600&h=600" alt="Product 1">
+                <h3>TRAVIS SCOTT DUNKS <div></div>( MANY STYLES )</h3>
+                <p><h3>$46</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271678322&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 15 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1810692503-25360000018cd96f4ed60a23136f_1600_1600.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE SHOX <div></div>( MANY STYLES )</h3>
+                <p><h3>$28</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271701926&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 16 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1839532311-66c60000018f80e7ac240a230115_599_715.jpg?w=600&h=600" alt="Product 1">
+                <h3>NEW BALANCE 550 <div></div>( MANY COLOURWAYS )</h3>
+                <p><h3>$29</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270643237&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 17 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1666399769-252808396-34a90000018f74f62db60a210559_800_800.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE AIR MAX PLUS TN'S <div></div>( MANY STYLES )</h3>
+                <p><h3>$30</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270698023&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 18 -->
+            <div class="product-card">
+                <img src="https://sosukicks.ro/cdn/shop/files/nike-hot-step-2-nocta-white_grande.webp?v=1720999127" alt="Product 1">
+                <h3>NIKE HOT STEP 2</h3>
+                <p><h3>$54</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271625422&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 19 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1800975561-1234478995-042c0000018f4ce9bd580a210298_800_800.jpg?w=600&h=600" alt="Product 1">
+                <h3>JORDAN 4'S BEST BATCH <div></div>( 15 COLORWAYS )</h3>
+                <p><h3>$80</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271692028&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 20 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1809160355-48eb0000018c49e6313a0a813470-unadjust_800_800.png?w=600&h=600" alt="Product 1">
+                <h3>DUNKS X OFFWHITE <div></div>( MANY STYLES )</h3>
+                <p><h3>$36</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270672655&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 21 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1787182201-252808396-5e340000018f7d8e5d410a8115b5-unadjust_800_800.png?w=600&h=600" alt="Product 1">
+                <h3>LOUIS VUITTON SLIDES  <div></div>( 4 COLOURWAYS )</h3>
+                <p><h3>$35</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270553385&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 22 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/wdseller1610144534-4f180000018f683e84930a20e7c7_957_956.jpg?w=600&h=600" alt="Product 1">
+                <h3>JBAPESTAS <div></div>( MANY COLOURWAYS )</h3>
+                <p><h3>$30</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271641270&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 23 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/weidian209839494-42cc0000018b2382b8c70a207569_640_853.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE NOCTA GLIDE</h3>
+                <p><h3>$48</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271631484&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 24 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem901819060140-78bd0000018ceda9949b0a231179_800_533.jpg?w=600&h=600" alt="Product 1">
+                <h3>LOUIS VUITTON TRAINER <div></div>( MANY COLOURWAYS)</h3>
+                <p><h3>$70</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271688112&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 25 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1799783535-73160000018f750d3ca00a20e35c_1280_852.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE AIRMAX 97 SPECIAL EDITIONS <div></div>( MANY STYLES )</h3>
+                <p><h3>$37</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270662453&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 26 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1800975561-1234478995-6d020000018f4ce97cc20aa0233d_500_500.jpg" alt="Product 1">
+                <h3>MORE NIKE DUNKS BEST BATCH</h3>
+                <p><h3>$59</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270662455&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 27 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1794237888-567e0000018f6f972caa0a20e2c5_724_419.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE SHOX  <div></div>( ALL COLOURWAYS )</h3>
+                <p><h3>$41</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270651047&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 28 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1810692503-2ad00000018cd92735240a2313c4_800_800.jpg?w=600&h=600" alt="Product 1">
+                <h3>NEW BALANCE 2002R</h3>
+                <p><h3>$36</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271711894&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 29 -->
+            <div class="product-card">
+                <img src="https://outsole.ro/cdn/shop/files/baskets-yeezy-slide-resin-pour-homme-et-femme-disponible-sur-kikikickz-704716_800x_6bd82b09-371d-4a82-8825-d18bc31709d6.jpg?v=1688480748" alt="Product 1">
+                <h3>YEEZY SLIDES <div></div>( MANY COLOURWAYS )</h3>
+                <p><h3>$23</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270619257&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 30 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1809160355-237e0000018e7424f6fc0a23132e_1290_1224.jpg?w=600&h=600" alt="Product 1">
+                <h3>JORDAN 1's LOW <div></div>( MANY STYLES )</h3>
+                <p><h3>$38</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271715812&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 31 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/open1840466345-252808396-58970000018fa69475500a239383_1000_1000.jpg?w=600&h=600" alt="Product 1">
+                <h3>GUCCI / BURBERRY SLIDES <div></div>( MANY STYLES )</h3>
+                <p><h3>$5</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271713856&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 32 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/wdseller1508140077-09220000018e7fa2966b0a22d160_1089_1087.jpg?w=600&h=600" alt="Product 1">
+                <h3>NIKE AIR UPTEMPOS</h3>
+                <p><h3>$32</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7271735698&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+            <!-- Product 33 -->
+            <div class="product-card">
+                <img src="https://si.geilicdn.com/pcitem1810692503-0ad70000018d2f53e4b30a23136f_800_800.jpg?w=600&h=600" alt="Product 1">
+                <h3>YEEZY BOOST 700</h3>
+                <p><h3>$52</h3></p>
+                <a href="https://cnfans.com/product/?shop_type=weidian&id=7270690203&ref=1101585" target="_blank" class="product-link">Buy on CNfans</a>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a passionate store focused on delivering the best products to our customers. Our mission is to provide quality and excellence.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to get in touch through our contact page.</p>
+        <p class="product-card"><a href="https://t.me/PANDAADEMON" target="_blank" class="product-link">CLICK HERE TO JOIN THE TELEGRAM GROUP</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Store. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Wave effect -->
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+</body>
+</html>
